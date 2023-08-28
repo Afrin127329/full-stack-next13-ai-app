@@ -1,8 +1,8 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import Profile from "@components/Profile";
 
@@ -19,6 +19,7 @@ const MyProfile = () => {
 
       setMyPosts(data);
     };
+
 
     if (session?.user.id) fetchPosts();
   }, [session?.user.id]);
