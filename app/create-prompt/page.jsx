@@ -9,6 +9,7 @@ import Form from "@components/Form";
 const CreatePrompt = () => {
   const router = useRouter();
   const { data: session } = useSession();
+  // console.log(session);
 
   const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({ prompt: "", tag: "" });
@@ -29,6 +30,7 @@ const CreatePrompt = () => {
 
       if (response.ok) {
         router.push("/");
+        console.log(response);
       }
     } catch (error) {
       console.log(error);
